@@ -1,37 +1,36 @@
-## Role Name
+## MOTD Ansible Role
 
 Configures MOTD(Message of the day) on RHEL/CentOS 7/8 servers.
 
-## Requirements
+### Requirements
 
-No special requirements; note that this role requires root access, so either run it in a playbook with a global `become: yes`, or invoke the role in your playbook like:
+No special requirements. Also note that this role requires root access, so either run
+it in a playbook with a global `become: true`, or invoke the role in your playbook like:
 
-    - hosts: all
-      roles:
-        - role: bilalcaliskan.motd
-          become: yes
+```yaml
+- hosts: all
+  roles:
+    - bilalcaliskan.motd
+```
 
-## Role Variables
+### Role Variables
+See the default values in [defaults/main.yml](defaults/main.yml). You can overwrite them in [vars/main.yml](vars/main.yml) if neccessary or you can set them while running playbook.
 
-Available variables are listed below, along with default values (see `defaults/main.yml`):
-
-        message: Your custom message
-
-## Dependencies
+### Dependencies
 
 None
 
-## Example Playbook
+### Example Playbook File
 
-    - hosts: all
-      become: yes
-      roles:
-        - { role: bilalcaliskan.motd }
+```yaml
+- hosts: all
+  become: true
+  roles:
+    - role: bilalcaliskan.motd
+      vars:
+        message: "{{ YOUR_CUSTOM_MESSAGE }}"
+```
 
-*Inside `vars/main.yml`*:
-
-        message: Your custom message
-
-## License
+### License
 
 MIT / BSD
