@@ -1,5 +1,7 @@
 ## MOTD Ansible Role
 
+[![CI](https://github.com/bilalcaliskan/motd-ansible-role/workflows/CI/badge.svg?event=push)](https://github.com/bilalcaliskan/motd-ansible-role/actions?query=workflow%3ACI)
+
 Configures MOTD(Message of the day) on RHEL/CentOS 7/8 servers.
 
 ### Requirements
