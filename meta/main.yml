@@ -2,7 +2,7 @@ galaxy_info:
   author: bilalcaliskan
   role_name: motd
   description: Configuration role for MOTD(message of the day)
-  min_ansible_version: 2.6
+  min_ansible_version: 2.4
   galaxy_tags:
     - configuration
     - motd
